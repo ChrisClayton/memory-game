@@ -1,3 +1,18 @@
-<h1>
-  {{title}}
-</h1>
+<section>
+  <header>
+    <h1>{{title}}</h1>
+  </header>
+  <nav class="menu">
+    <div class="item">
+      <button (click)="newGame()">New</button>
+    </div>
+    <div class="item">
+      <button (click)="about()">About</button>
+    </div>
+  </nav>
+  <div class="main">
+    <router-outlet></router-outlet>
+  </div>
+  <footer>
+  </footer>
+</section>
