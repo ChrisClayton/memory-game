@@ -1,0 +1,6 @@
+<section class="board">
+  <memory-card *ngFor="let card of memory.cards" [class.flipped]="card.flipped" (click)="memory.flipCard(card)" [card]="card"></memory-card>
+
+  <memory-result *ngIf="memory.isOver" class="animated rubberBand"></memory-result>
+
+</section>

@@ -6,15 +6,26 @@ import {RouterModule} from "@angular/router";
 
 import { AppComponent } from './app.component';
 import { MemoryService } from './memory/memory.service';
+import { CardService } from './card/card.service';
 
 import {HomeComponent} from './home/home.component';
 import {AboutComponent} from './about/about.component';
+import { GameBoardComponent } from './game-board/game-board.component';
+import { CardComponent } from './card/card.component';
+import {HtmlSanitizerPipe} from "./shared/html-sanitizer.pipe";
+import { ResultComponent } from './result/result.component';
+import { GameStateComponent } from './game-state/game-state.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    AboutComponent
+    AboutComponent,
+    GameBoardComponent,
+    CardComponent,
+    HtmlSanitizerPipe,
+    ResultComponent,
+    GameStateComponent
     // MemoryComponent
   ],
   imports: [
@@ -26,7 +37,7 @@ import {AboutComponent} from './about/about.component';
       {path: 'about', component: AboutComponent},
     ])
   ],
-  providers: [MemoryService],
+  providers: [MemoryService, CardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

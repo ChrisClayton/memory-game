@@ -1,0 +1,76 @@
+:host {
+    display: block;
+    width: 70px;
+    height: 100px;
+    margin: 10px;
+    cursor: pointer;
+    position: relative;
+}
+
+div.front, div.back {
+  background-color: #fdf7ef;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  font-size: 3em;
+  box-shadow: 0 0 10px #38393B;
+  backface-visibility: hidden;
+  z-index: 2;
+  transition: all .35s linear;
+}
+
+.front:hover, .back:hover {
+  box-shadow: 0 0 5px #38393B!important;
+}
+
+.front {
+  transform: perspective(600px) rotateY(0deg);
+  position: relative;
+}
+
+.back {
+  color: #363;
+  transform: perspective(600px) rotateY(-180deg);
+}
+:host.flipped .front {
+    transform: rotateY(-180deg);
+}
+:host.flipped .back {
+    transform: rotateY(0deg);
+}
+
+.card-bg {
+  background-image: -webkit-radial-gradient(#D1A46B,#B57744);
+  background-image: -o-radial-gradient(#D1A46B,#B57744);
+  background-image: -ms-radial-gradient(#D1A46B,#B57744);
+  background-image: radial-gradient(#D1A46B,#B57744);
+  -webkit-background-size: 100%;
+  background-size: 100%;
+}
+
+.card-bg:before {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  z-index: -100;
+  position: absolute;
+  /* background-image: -webkit-linear-gradient(0, rgba(255,255,255,.014) 50%, transparent 50%), -webkit-linear-gradient(0, rgba(255,255,255,.015) 50%, transparent 50%), -webkit-linear-gradient(0, transparent 50%, rgba(255,255,255,.02) 50%), -webkit-linear-gradient(0, transparent 50%, rgba(255,255,255,.02) 50%); */
+  background-image: -o-linear-gradient(0, rgba(255,255,255,.014) 50%, transparent 50%), -o-linear-gradient(0, rgba(255,255,255,.015) 50%, transparent 50%), -o-linear-gradient(0, transparent 50%, rgba(255,255,255,.02) 50%), -o-linear-gradient(0, transparent 50%, rgba(255,255,255,.02) 50%);
+  background-image: -ms-linear-gradient(0, rgba(255,255,255,.014) 50%, transparent 50%), -ms-linear-gradient(0, rgba(255,255,255,.015) 50%, transparent 50%), -ms-linear-gradient(0, transparent 50%, rgba(255,255,255,.02) 50%), -ms-linear-gradient(0, transparent 50%, rgba(255,255,255,.02) 50%);
+  background-image: linear-gradient(0, rgba(255,255,255,.014) 50%, transparent 50%), linear-gradient(0, rgba(255,255,255,.015) 50%, transparent 50%), linear-gradient(0, transparent 50%, rgba(255,255,255,.02) 50%), linear-gradient(0, transparent 50%, rgba(255,255,255,.02) 50%);
+  -webkit-background-size: 13px, 29px, 37px, 53px;
+  background-size: 13px, 29px, 37px, 53px;
+}
+
+.icon {
+  line-height: 1;
+  vertical-align: middle;
+  font-size: 1.3em;
+  margin: auto 0;
+}

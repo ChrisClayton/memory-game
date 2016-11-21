@@ -1,16 +1,16 @@
 <section>
-  <header>
-    <h1>{{title}}</h1>
-  </header>
-  <nav class="menu">
+  <nav class="menu container">
+    <header class="header item">
+      <h1>{{title}}</h1>
+    </header>
     <div class="item">
-      <button (click)="newGame()">New</button>
+      <button (click)="newGame()">New Game</button>
     </div>
     <div class="item">
       <button (click)="about()">About</button>
     </div>
   </nav>
-  <div class="main">
+  <div class="segment container">
     <router-outlet></router-outlet>
   </div>
   <footer>
