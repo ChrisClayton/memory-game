@@ -33,7 +33,9 @@ import { GameStateComponent } from './game-state/game-state.component';
     FormsModule,
     HttpModule,
     RouterModule.forChild([
-      {path: 'memory', component: MemoryComponent, children: [
+      {path: 'memory', component: MemoryComponent, 
+       children: [
+        {path: '', component: HomeComponent},
         {path: 'home', component: HomeComponent},
         {path: 'about', component: AboutComponent}
       ]},

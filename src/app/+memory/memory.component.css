@@ -7,3 +7,10 @@ header h1 {
 .small.header {
   font-size: 1.071em;
 }
+
+.menu {
+    background-color: #1d1e23;
+}
+.menu .item {
+    color: white;
+}
