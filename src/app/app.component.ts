@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from "@angular/router";
-import {MemoryService} from "./memory/memory.service";
 
 @Component({
   selector: 'app-root',
@@ -10,20 +9,11 @@ import {MemoryService} from "./memory/memory.service";
 export class AppComponent implements OnInit {
   title = 'Memory';
 
-  constructor(private memory: MemoryService, private router:Router){
+  constructor(private router:Router){
 
   }
 
   ngOnInit(){
   }
-
-  // newGame(){
-  //   this.router.navigate(['']);
-  //   this.memory.newGame();
-  // }
-
-  // about(){
-  //   this.router.navigate(['/about']);
-  // }
-
+  
 }
