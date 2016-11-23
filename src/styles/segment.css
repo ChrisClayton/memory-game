@@ -1,0 +1,52 @@
+
+/*******************************
+            Segment
+*******************************/
+
+.segment {
+  position: relative;
+  background: #FFFFFF;
+  box-shadow: 0px 1px 2px 0 rgba(34, 36, 38, 0.15);
+  margin: 1rem 0em;
+  padding: 1em 1em;
+  border-radius: 0.28571429rem;
+  border: 1px solid rgba(34, 36, 38, 0.15);
+}
+.segment:first-child {
+  margin-top: 0em;
+}
+.segment:last-child {
+  margin-bottom: 0em;
+}
+
+/* Vertical */
+.segment.vertical {
+  margin: 0em;
+  padding-left: 0em;
+  padding-right: 0em;
+  background: none transparent;
+  border-radius: 0px;
+  box-shadow: none;
+  border: none;
+  border-bottom: 1px solid rgba(34, 36, 38, 0.15);
+}
+.segment.vertical:last-child {
+  border-bottom: none;
+}
+
+
+/*******************************
+           Variations
+*******************************/
+
+
+/*-------------------
+       Basic
+--------------------*/
+
+.segment.basic {
+  background: none transparent;
+  box-shadow: none;
+  border: none;
+  border-radius: 0px;
+}

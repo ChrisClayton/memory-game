@@ -11,6 +11,8 @@ export class MemoryService {
     moves: number;
     isOver: boolean = false;
 
+    resultState: string = 'out';
+
   constructor(private cardsService: CardService) {
       this.newGame();
   }
@@ -66,6 +68,7 @@ export class MemoryService {
 
             if (this.flippedCards === this.cards.length) {
               this.isOver = true;
+              this.resultState = this.resultState === 'out' ? 'in' : 'out';
             }
           }
           else {

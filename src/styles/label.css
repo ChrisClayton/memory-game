@@ -1,0 +1,41 @@
+
+
+/*******************************
+            Label
+*******************************/
+
+.label {
+  display: inline-block;
+  line-height: 1;
+  vertical-align: baseline;
+  margin: 0em 0.14285714em;
+  background-color: #E8E8E8;
+  background-image: none;
+  padding: 0.5833em 0.833em;
+  color: rgba(0, 0, 0, 0.6);
+  text-transform: none;
+  font-weight: bold;
+  border: 0px solid transparent;
+  border-radius: 0.28571429rem;
+  -webkit-transition: background 0.1s ease;
+  transition: background 0.1s ease;
+}
+.label:first-child {
+  margin-left: 0em;
+}
+.label:last-child {
+  margin-right: 0em;
+}
+
+
+/* Detail */
+.label > .detail {
+  display: inline-block;
+  vertical-align: top;
+  font-weight: bold;
+  margin-left: 1em;
+  opacity: 0.8;
+}
+.label > .detail .icon {
+  margin: 0em 0.25em 0em 0em;
+}

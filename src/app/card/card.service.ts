@@ -15,19 +15,19 @@ export class CardService {
     }
 
     getCards(): Observable<any> {
-      return this.getFontAwesomeCards();
+      return this.getCardIcons();
     }
 
-    getFontAwesomeCards(): Observable<any> {
-      return this.http.get(prefixRepo('../../assets/cards.json'))
+    getCardIcons(): Observable<any> {
+      return this.http.get(prefixRepo('../../assets/data/cards.json'))
         .map((res)=> {
           let icons = res.json();
-          return icons.map(icon => new Card(guid(), this.faTemplate(icon)));
+          return icons.map(icon => new Card(guid(), this.iconTemplate(icon)));
         });
     }
 
-    faTemplate(icon) {
-      return '<i class="icon ' + icon + ' aria-hidden="true"></i>';
+    iconTemplate(icon) {
+      return '<i class="' + icon + ' icon" aria-hidden="true"></i>';
     }
 
 }
