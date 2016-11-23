@@ -17,13 +17,13 @@ export class AppComponent implements OnInit {
   ngOnInit(){
   }
 
-  newGame(){
-    this.router.navigate(['']);
-    this.memory.newGame();
-  }
+  // newGame(){
+  //   this.router.navigate(['']);
+  //   this.memory.newGame();
+  // }
 
-  about(){
-    this.router.navigate(['/about']);
-  }
+  // about(){
+  //   this.router.navigate(['/about']);
+  // }
 
 }

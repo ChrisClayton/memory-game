@@ -1,8 +1,9 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+
+import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import {RouterModule} from "@angular/router";
+import {RouterModule} from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { MemoryService } from './memory/memory.service';
@@ -26,7 +27,6 @@ import { GameStateComponent } from './game-state/game-state.component';
     HtmlSanitizerPipe,
     ResultComponent,
     GameStateComponent
-    // MemoryComponent
   ],
   imports: [
     BrowserModule,
@@ -34,6 +34,7 @@ import { GameStateComponent } from './game-state/game-state.component';
     HttpModule,
     RouterModule.forRoot([
       {path: '', component: HomeComponent},
+      {path: 'home', component: HomeComponent},
       {path: 'about', component: AboutComponent},
     ])
   ],
